@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://ea82gm64uwm6"]
+
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_pwvpt"]
+[ext_resource type="Texture2D" uid="uid://kp65ivjey511" path="res://taylor-van-riper-yQorCngxzwI-unsplash.jpg" id="2_onq51"]
+[ext_resource type="Script" path="res://TextureRectmainmenu.gd" id="3_ak38r"]
+
+[node name="mainmenu2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwvpt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+clip_contents = true
+layout_mode = 0
+offset_left = -9.0
+offset_top = -1180.0
+offset_right = 3144.0
+offset_bottom = 4512.0
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("2_onq51")
+expand_mode = 1
+stretch_mode = 4
+flip_h = true
+script = ExtResource("3_ak38r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 155.0
+offset_top = 24.0
+offset_right = 224.0
+offset_bottom = 125.0
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "start"
+
+[node name="settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "settings"
+
+[node name="stop" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "stop
+"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/stop" to="." method="_on_stop_pressed"]

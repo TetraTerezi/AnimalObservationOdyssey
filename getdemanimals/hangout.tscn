@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://3x74d4aqpjsj"]
+
+[ext_resource type="Texture2D" uid="uid://b2an0l8vl02fa" path="res://kar-ming-moo-Q_3WmguWgYg-unsplash.jpg" id="1_i45vh"]
+[ext_resource type="Texture2D" uid="uid://dnaicfleue5i2" path="res://elio-santos-q7pOFt3J0ks-unsplash.jpg" id="2_47h62"]
+[ext_resource type="Texture2D" uid="uid://bqtgbl3wqeh70" path="res://dominik-lange-BFsm5vldl2I-unsplash.jpg" id="3_5b2os"]
+
+[node name="hangout" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 778.0
+offset_top = -256.0
+offset_right = 1388.0
+offset_bottom = 762.0
+texture = ExtResource("1_i45vh")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 282.0
+offset_top = -3.0
+offset_right = 1235.0
+offset_bottom = 902.0
+texture = ExtResource("2_47h62")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -146.0
+offset_top = -26.0
+offset_right = 408.0
+offset_bottom = 757.0
+texture = ExtResource("3_5b2os")
+expand_mode = 1
+stretch_mode = 4

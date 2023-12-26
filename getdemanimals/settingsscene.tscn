@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://y0kg81ma2qgo"]
+
+[ext_resource type="Script" path="res://settingsscript.gd" id="1_nbwfc"]
+[ext_resource type="Texture2D" uid="uid://kp65ivjey511" path="res://taylor-van-riper-yQorCngxzwI-unsplash.jpg" id="2_cesb7"]
+[ext_resource type="Script" path="res://TextureRectmainmenu.gd" id="3_3hugj"]
+
+[node name="mainsettingsmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nbwfc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+clip_contents = true
+layout_mode = 0
+offset_left = -9.0
+offset_top = -1180.0
+offset_right = 3144.0
+offset_bottom = 4512.0
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("2_cesb7")
+expand_mode = 1
+stretch_mode = 4
+flip_h = true
+script = ExtResource("3_3hugj")
+metadata/_edit_lock_ = true
+
+[node name="settingsmenu" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 155.0
+offset_top = 24.0
+offset_right = 1121.0
+offset_bottom = 653.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settingsmenu"]
+layout_mode = 0
+offset_right = 1029.0
+offset_bottom = 637.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="volume" type="Button" parent="settingsmenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "volume"
+
+[node name="volume2" type="Button" parent="settingsmenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "vulume?"
+
+[node name="back" type="Button" parent="settingsmenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "back"
+
+[connection signal="pressed" from="settingsmenu/VBoxContainer/volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="settingsmenu/VBoxContainer/back" to="." method="_on_back_pressed"]

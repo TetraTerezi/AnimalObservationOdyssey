@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://dso8jsk652plu"]
+
+[ext_resource type="Script" path="res://h_menu.gd" id="1_4l1dp"]
+[ext_resource type="Texture2D" uid="uid://j4220ck0gmdh" path="res://chris-fuller-TXMp-vvrCg4-unsplash.jpg" id="2_7bgcg"]
+
+[node name="hmenu" type="Node2D"]
+script = ExtResource("1_4l1dp")
+
+[node name="Chris-fuller-txMp-vvrCg4-unsplash" type="Sprite2D" parent="."]
+position = Vector2(635, -244)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_7bgcg")
+
+[node name="hmenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="hmenu"]
+layout_mode = 1
+offset_right = 1284.0
+offset_bottom = 720.0
+theme_override_constants/separation = 85
+alignment = 1
+
+[node name="back" type="Button" parent="hmenu/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Back
+to
+Menu"
+
+[node name="hangout" type="Button" parent="hmenu/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Hang
+Out"
+
+[node name="help" type="Button" parent="hmenu/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Help"
+
+[node name="hunt" type="Button" parent="hmenu/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Hunt"
+
+[connection signal="pressed" from="hmenu/HBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="hmenu/HBoxContainer/hangout" to="." method="_on_hangout_pressed"]
+[connection signal="pressed" from="hmenu/HBoxContainer/help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="hmenu/HBoxContainer/hunt" to="." method="_on_hunt_pressed"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbhtwhvar0s20"]
+
+[ext_resource type="Texture2D" uid="uid://dl2m5hd806aja" path="res://mauro-gigli-DNSQ57t_h7Y-unsplash.jpg" id="1_0ulqq"]
+[ext_resource type="Script" path="res://TextureRectmainmenu.gd" id="2_x1vcq"]
+[ext_resource type="Script" path="res://draftscript.gd" id="3_idh4d"]
+[ext_resource type="Script" path="res://Dictionarylocales.gd" id="4_45tbi"]
+
+[node name="draft" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -627.0
+offset_top = -358.0
+offset_right = 4054.0
+offset_bottom = 2763.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0ulqq")
+script = ExtResource("2_x1vcq")
+metadata/_edit_lock_ = true
+
+[node name="draft selecton screen" type="MarginContainer" parent="."]
+offset_left = 49.0
+offset_top = 93.0
+offset_right = 1200.0
+offset_bottom = 473.0
+script = ExtResource("3_idh4d")
+
+[node name="ban area" type="HBoxContainer" parent="draft selecton screen"]
+layout_mode = 2
+
+[node name="locale 1" type="Button" parent="draft selecton screen/ban area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="locale 2" type="Button" parent="draft selecton screen/ban area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="locale 3" type="Button" parent="draft selecton screen/ban area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="locale 4" type="Button" parent="draft selecton screen/ban area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 49.0
+offset_top = 515.0
+offset_right = 1199.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="confirm button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 66
+text = "confirm"
+
+[node name="dictlocales" type="Node2D" parent="."]
+script = ExtResource("4_45tbi")
